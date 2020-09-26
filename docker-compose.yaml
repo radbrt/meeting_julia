@@ -1,0 +1,14 @@
+version: '2'
+services:
+  julia:
+    image: jupyter/datascience-notebook
+    volumes:
+      -  ./:/home/jovyan/
+    ports:
+      - 8888:8888
+    environment:
+      - GRANT_SUDO=yes
+  #  command: "start-notebook.sh \
+  #          --NotebookApp.password='sha1:b96a34b24f22:2e2359373938cf53cdc786ca45db521fa10e9721'"
+
+
